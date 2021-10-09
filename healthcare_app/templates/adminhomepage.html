@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Welcome admin</a>
+      <a href="/adminappts/" class="navitem" style="text-decoration: none; color: black">
+          Manage appointments</a>
+    <!--<form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form> -->
+    <a class="btn btn-danger" href="/adminlogout/">logout</a>
+  </div>
+</nav>
+
+
+<form method="post" action="/adddoctor/">
+    {% csrf_token%}
+    <div class="container" style="width: 730px;display: block;margin: auto">
+    <input type = "text" placeholder="name" class="form-control" name="doctor" style="width: 200px;
+        display: inline;margin:auto">
+        <input type = "text" placeholder = "speciality" class="form-control" name = "speciality", style="width: 200px;
+display: inline;margin: auto">
+
+    <input type = "text" placeholder="schedule" class="form-control" name="schedule" style="width: 200px;
+        display: inline;margin:auto">
+    <input style="display: inline" type="submit" value="add" name="" class="btn btn-success">
+    </div>
+</form>
+
+<div class="container" style="display: block;margin: auto; margin-top: 80px">
+<table style="width: 50%">
+    <tr>
+        <th>Doctor Name</th>
+        <th>Speciality</th>
+        <th>Schedule</th>
+        <th>Delete</th>
+    </tr>
+    {% for doctor in doctors %}
+    <tr>
+        <td>{{doctor.name}}</td>
+        <td>{{doctor.speciality}}</td>
+        <td>{{doctor.schedule}}</td>
+        <td><a href="/deletedoctor/{{doctor.id}}/" class="btn btn-danger">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+{% endblock %}

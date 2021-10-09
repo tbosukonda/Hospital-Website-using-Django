@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="text-align: center">My Appointments </h1>
+{% for appt in appts%}
+<div style="margin: 40px" class="alert alert-warning" role="alert">
+    <p>{{appt.username}}</p>
+    <p>{{appt.contactno}}</p>
+    <p>{{appt.name}}</p>
+    <p>{{appt.speciality}}</p>
+    <p>{{appt.schedule}}</p>
+    <p>STATUS : {{appt.status}}</p>
+</div>
+{% endfor %}
+{% endblock %}

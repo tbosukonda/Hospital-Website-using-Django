@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="text-align: center">My Appointments </h1>
+{% for appt in appts%}
+<div style="margin: 40px" class="alert alert-warning" role="alert">
+    <p style="text-align: center;">{{appt.username}}</p>
+    <p style="text-align: center;">{{appt.contactno}}</p>
+    <p style="text-align: center;">{{appt.name}}</p>
+    <p style="text-align: center;">{{appt.speciality}}</p>
+    <p style="text-align: center;">{{appt.schedule}}</p>
+    <p style="text-align: center;">STATUS : {{appt.status}}</p>
+    <div class="container" style="width: 200px;margin: auto">
+        <a href = "/acceptappt/{{appt.id}}/" style="display: inline" class="btn btn-success">Accept</a>
+        <a href = "/declineappt/{{appt.id}}/" style="display: inline" class="btn btn-danger">Decline</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
