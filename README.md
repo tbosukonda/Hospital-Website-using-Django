@@ -9,12 +9,16 @@ This project is a simple Hospital Management website built using Django. The app
     ![](./Screenshots/welcome_page.png)
 2. Login Page
 
-  - Existing users can access their accounts by entering their username and password.
+  - Existing users can access their accounts by entering their username and password. 
 3. User Dashboard
 
   - Once logged in, users are directed to the dashboard, where they can:
-  - Schedule appointments with doctors based on available time slots.
+  - Schedule appointments with doctors based on available schedule.
+
+    [](./Screenshots/user_dashboard.png)
   - View the status of their appointments.
+
+    [](./Screenshots/user_appt.png)
 4. Admin Login Page
 
   - A dedicated login page for administrators to securely access their accounts.
@@ -22,4 +26,8 @@ This project is a simple Hospital Management website built using Django. The app
 
   - After logging in, administrator can:
   - Modify doctors' schedules and update their availability.
+
+    ![](./Screenshots/admin_dashboard.png)
   - Manage appointment requests by approving or rejecting them.
+
+    ![](./Screenshots/admin_appt.png)
