@@ -8,7 +8,7 @@ urlpatterns = [
     path('adminauthenticate/', authenticateadmin),
     path('admin/homepage/', adminhomepageview, name='adminhomepage'),
     path('adminlogout/', logoutadmin),
-    path('adddoctor/', adddoctor),r
+    path('adddoctor/', adddoctor),
     path('deletedoctor/<int:doctorpk>/', deletedoctor),
     path('',homepageview, name = "homepage"),
     path('signupuser/',signupuser),
