@@ -5,6 +5,8 @@ This project is a simple Hospital Management website built using Django. The app
    
   - New users can create a profile by registering an account.
   - Existing users can log in using their credentials.
+
+    ![](./Screenshots/welcome_page.png)
 2. Login Page
 
   - Existing users can access their accounts by entering their username and password.
